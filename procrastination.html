@@ -1,6 +1,13 @@
 <html>
 <head>
    <script>
+   
+   function handleClick() {
+				var element = document.getElementById("thingToClick");
+				element.innerHTML = "Get back to work!";
+				element.style.backgroundColor = "red";
+			}
+   
 function showAlert() 
 {alert("You're on this page!");	}
           </script>
@@ -96,6 +103,8 @@ h7 {
 </style>
 </head>
 <body>
+   
+<div id="thingToClick" onclick="handleClick();">Click me!</div>
     
  <div class="container">
     
@@ -119,7 +128,7 @@ h7 {
   <div class="row">
     <div class="col-md-1"></div>
       <div class="col-md-10"> 
-        <img src="https://lh3.googleusercontent.com/-RJGuC5G5Mas/VXoIKl0r88I/AAAAAAAAWnU/sys4sIi5sBY/w506-h750/bigstock-Motivational-Life-Business-Phr-80717564.jpg"
+        <img onclick="handleClick()" src="https://lh3.googleusercontent.com/-RJGuC5G5Mas/VXoIKl0r88I/AAAAAAAAWnU/sys4sIi5sBY/w506-h750/bigstock-Motivational-Life-Business-Phr-80717564.jpg"
          alt="https://lh3.googleusercontent.com/-RJGuC5G5Mas/VXoIKl0r88I/AAAAAAAAWnU/sys4sIi5sBY/w506-h750/bigstock-Motivational-Life-Business-Phr-80717564.jpg" class="img-rounded img-responsive center-block"></div>
           <div class="col-md-1"></div>
   </div>
