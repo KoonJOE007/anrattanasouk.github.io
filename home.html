@@ -1,23 +1,31 @@
 <html>
 <head>
 <script>
- var currentImageIndex = 0;
-           var images = [
+	var currentImageIndex = 0;
+	var images = [
                      "https://pbs.twimg.com/media/CMSY89ZVEAAF8wE.jpg",
                      "https://bgcdn.s3.amazonaws.com/wp-content/uploads/2013/04/5-2-God-is-in-Nature.jpg",
                      "http://freephotos.atguru.in/hdphotos/nature-spring-wallpapers/nature-spring-2014-11.jpg",
-                     "http://images.iimg.in/c/55a8ba46ae798ef9308b458c-4-501-0-1437121097/google/wonderful-neture-free-best-wallpaper.img?crop=1"];
-                     function updateImage() {
-                      var image = document.getElementById("currentImage");
-				image.src = images[currentImageIndex];
-        currentImageIndex = currentImageIndex + 1;
-        if(currentImageIndex >= images.length)
-        	currentImageIndex = 0;}
-        	setInterval(updateImage, 2000);
-        	img.style="width;900:height:500";
+                     "http://images.iimg.in/c/55a8ba46ae798ef9308b458c-4-501-0-1437121097/google/wonderful-neture-free-best-wallpaper.img?crop=1"
+       	];
+       	
+	function updateImage() {
+        	var image = document.getElementById("currentImage");
+		image.src = images[currentImageIndex];
+        	img.style.width = "900";
+        	img.style.height = "500";
 
-function showAlert() 
-{alert("You're on this page!");	}
+        	currentImageIndex = currentImageIndex + 1;
+        	if(currentImageIndex >= images.length)
+        		currentImageIndex = 0;
+		
+	}
+
+	setInterval(updateImage, 2000);
+
+	function showAlert()  {
+		alert("You're on this page!");	
+	}
           </script>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
