@@ -4,8 +4,16 @@
  var currentImageIndex = 0;
            var images = [
                      "https://pbs.twimg.com/media/CMSY89ZVEAAF8wE.jpg",
-                     "https://bgcdn.s3.amazonaws.com/wp-content/uploads/2013/04/5-2-God-is-in-Nature.jpg"]
+                     "https://bgcdn.s3.amazonaws.com/wp-content/uploads/2013/04/5-2-God-is-in-Nature.jpg",
+                     "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQu5IXAI4hi0HoUoWLiHCCmW-PK-jc84k51jgsgNKZ-24I1HzyD3w"];
                      function updateImage() {
+                      var image = document.getElementById("currentImage");
+				image.src = images[currentImageIndex];
+        currentImageIndex = currentImageIndex + 1;
+        if(currentImageIndex >= images.length)
+        	currentImageIndex = 0;
+}setInterval(updateImage, 1000);
+
 function showAlert() 
 {alert("You're on this page!");	}
           </script>
@@ -83,8 +91,7 @@ h5 {
     <div class="row">
         <div class="col-md-1 text-center"></div>
             <div class="col-md-10 text-center">
-            <img src="https://pbs.twimg.com/media/CMSY89ZVEAAF8wE.jpg"
-                alt="https://pbs.twimg.com/media/CMSY89ZVEAAF8wE.jpg" style="width:780px;height:331px;"></div>
+            <img id="currentImage"/> style="width:780px;height:331px;"></div>
                 <div class="col-md-1 text-center"></div> 
             
         
